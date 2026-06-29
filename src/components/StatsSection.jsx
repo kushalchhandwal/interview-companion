@@ -2,6 +2,7 @@ import StatsCard from "./StatsCard";
 function StatsSection({solved,total}){
     return (
         <>
+        <div className="stats-container">
          <StatsCard
     title="Problems Solved"
     value={solved}
@@ -16,6 +17,7 @@ function StatsSection({solved,total}){
     title="Current Streak"
     value="9 Days"
 />
+</div>
         </>
     );
 }

@@ -2,9 +2,11 @@ function StatsCard({title,value}){
     return (
     
     <>
+    <div className ="Card">
     <h3>{title}</h3>
 
 <p>{value}</p>
+</div>
     </>
         
     );

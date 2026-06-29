@@ -1,8 +1,9 @@
 import "./App.css";
 import Header from "./components/Header";
-import Welcome from "./components/Welcome";
-import TopicList from "./components/TopicList";
-import StatsSection from "./components/StatsSection";
+import Dashboard from "./pages/Dashboard";
+
+
+
 
 function App() {
 
@@ -14,17 +15,16 @@ function App() {
         <>
             <Header />
 
-            <Welcome 
-            name={name}
-           />
-
+            
+<Dashboard
+name={name}
+solved={solved}
+total={total}/>
          
 
-            <TopicList/>
+          
 
-           <StatsSection
-           solved={solved}
-           total={total}/>
+          
 
         </>
     );
