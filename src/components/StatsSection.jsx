@@ -1,23 +1,42 @@
 import StatsCard from "./StatsCard";
 function StatsSection({solved,total}){
+const progress = (solved / total) * 100;
+    const stats=[
+   {
+    title: "Problems Solved",
+    value: `${solved}/${total}`,
+    icon: "📈",
+    progress: progress
+},
+    {
+        
+     title: "Progress",
+    value:  `${progress.toFixed(1)}%`,
+    icon: "🚀",
+    progress: progress
+
+    }
+    ,
+    {
+    title: "Current Streak",
+    value: "9 Days",
+    icon: "🔥"
+}
+];
     return (
         <>
-        <div className="stats-container">
-         <StatsCard
-    title="Problems Solved"
-    value={solved}
-/>
+                <div className="stats-container">
+       { stats.map((stat) => (
 
-<StatsCard
-    title="Progress"
-    value={`${((solved / total) * 100).toFixed(1)}%`}
-/>
-
-<StatsCard
-    title="Current Streak"
-    value="9 Days"
-/>
-</div>
+   <StatsCard
+        key={stat.title}
+        title={stat.title}
+        value={stat.value}
+        icon={stat.icon}
+        progress={stat.progress}
+    />
+))}</div>
+       
         </>
     );
 }

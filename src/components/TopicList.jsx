@@ -1,13 +1,18 @@
 function TopicList() {
+    const topics = [
+    "Arrays",
+    "Hashing",
+    "Binary Search",
+    
+];
     return (
         <>
             <h2>Topics Completed</h2>
 
             <ul>
-                <li>Arrays</li>
-                <li>Hashing</li>
-                <li>Binary Search</li>
-                <li>Linked Lists</li>
+                {topics.map((topic)=>(
+    <li key={topic}>{topic}</li>
+))}
             </ul>
         </>
     );
